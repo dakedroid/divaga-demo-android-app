@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:alpha="0.9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:layout_marginTop="@dimen/md_keylines"
+        android:layout_marginRight="@dimen/md_keylines"
+        android:layout_marginBottom="@dimen/md_keylines">
+
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="Local Tux"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_title"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="Version: "
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+        <TextView
+            android:id="@+id/version_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/version"
+            android:layout_below="@+id/card_title"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="1.0"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/plataforma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/version_content"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:text="Plataforma: "
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/plataforma_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/plataforma"
+            android:layout_below="@+id/version"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:text="Android (Nativo)"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/terminos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/plataforma"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:text="Terminos y Condiciones: "
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/article_subheading" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:alpha="0.9"
+        android:layout_below="@+id/r1"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:layout_marginTop="@dimen/md_keylines"
+        android:layout_marginRight="@dimen/md_keylines"
+        android:layout_marginBottom="@dimen/md_keylines"
+        android:background="@drawable/layout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Contacto_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="Contacto"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/sitio_Web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Contacto_title"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="Sitio Web: "
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/sitio_Web_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/sitio_Web"
+            android:layout_below="@+id/Contacto_title"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="www.localtux.com.mx"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sitio_Web"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:text="Facebook: "
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/facebook_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/facebook"
+            android:layout_below="@+id/sitio_Web"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:text="\@localtux"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/facebook"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:text="Correo: "
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/correo_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/correo"
+            android:layout_below="@+id/facebook"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:text="localtux@hotmail.com"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/article_subheading" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r3"
+        android:alpha="0.9"
+        android:layout_below="@+id/r2"
+        android:background="@drawable/layout_bg"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:layout_marginTop="@dimen/md_keylines"
+        android:layout_marginRight="@dimen/md_keylines"
+        android:layout_marginBottom="@dimen/md_keylines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/desarrolladores_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="Dessarrolladores"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorAccent" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/desarrolladores_title"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:scaleType="centerCrop"
+            android:background="@drawable/user_profile_image_background"
+            android:id="@+id/molina" />
+
+
+        <TextView
+            android:id="@+id/molina_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/molina"
+            android:layout_below="@+id/desarrolladores_title"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="20dp"
+            android:text="Kevin Molina (Programación)"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/molina"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:scaleType="centerCrop"
+            android:background="@drawable/user_profile_image_background"
+            android:id="@+id/ojeda" />
+
+
+        <TextView
+            android:id="@+id/ojeda_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ojeda"
+            android:layout_below="@+id/molina"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="20dp"
+            android:text="Kevin Ojeda (Marketing)"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/ojeda"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:scaleType="centerCrop"
+            android:background="@drawable/user_profile_image_background"
+            android:id="@+id/barragan" />
+
+
+        <TextView
+            android:id="@+id/barragan_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/barragan"
+            android:layout_below="@+id/ojeda"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="20dp"
+            android:text="Nadia Barragan (Diseño)"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/article_subheading" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r4"
+        android:alpha="0.9"
+        android:layout_below="@+id/r3"
+        android:background="@drawable/layout_bg"
+        android:layout_marginLeft="@dimen/md_keylines"
+        android:layout_marginTop="@dimen/md_keylines"
+        android:layout_marginRight="@dimen/md_keylines"
+        android:layout_marginBottom="@dimen/md_keylines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ayudar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="Ayudar al Desarrollador"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/donar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ayudar_title"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:text="Donar"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/article_subheading" />
+
+        <TextView
+            android:id="@+id/reportar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/donar"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:text="Reportar Errores"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/article_subheading" />
+
+    </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

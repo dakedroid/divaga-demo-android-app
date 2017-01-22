@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Main items -->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/navigation_item_1"
+            android:icon="@drawable/ic_notifications_black_18dp"
+            android:title="Notificaciones"
+            app:actionLayout="@layout/action_layout"/>
+
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@drawable/ic_publish_black_18dp"
+            android:title="Subir Contenido"/>
+
+        <item
+            android:id="@+id/navigation_item_3"
+            android:icon="@drawable/ic_star_black_18dp"
+            android:title="Favoritos"/>
+
+        <item
+            android:id="@+id/navigation_item_4"
+            android:checked="true"
+            android:icon="@drawable/ic_share_black_18dp"
+            android:title="Compartir App"/>
+
+        <item
+            android:id="@+id/navigation_item_5"
+            android:icon="@drawable/ic_info_black_18dp"
+            android:title="Acerca De"/>
+    </group>
+    <group>
+
+        <item
+            android:id="@+id/log_out"
+            android:visible="true"
+            android:icon="@drawable/ic_person_outline_black_18dp"
+            android:title="Cerrar Sesion" />
+
+        <item
+            android:id="@+id/log_in"
+            android:visible="false"
+            android:icon="@drawable/ic_person_outline_black_18dp"
+            android:title="Iniciar Sesion" />
+    </group>
+</menu>

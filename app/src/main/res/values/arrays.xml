@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string-array name="lugares_menu_titulos">
+        <item>Restaurantes</item>
+        <item>Bares</item>
+        <item>Hoteles</item>
+        <item>Compras</item>
+        <item>Clinicas</item>
+        <item>Pizzerias</item>
+    </string-array>
+    <array name="lugares_menu_imagenes">
+        <item>@drawable/ic_restaurant_black_36dp</item>
+        <item>@drawable/ic_local_bar_black_36dp</item>
+        <item>@drawable/ic_hotel_black_36dp</item>
+        <item>@drawable/ic_local_grocery_store_black_36dp</item>
+        <item>@drawable/ic_local_hospital_black_36dp</item>
+        <item>@drawable/ic_local_pizza_black_36dp</item>
+    </array>
+
+    <string-array name="lugares_titulos">
+        <item>McDonalds</item>
+        <item>Bendito Mar</item>
+        <item>Bla Bla</item>
+        <item>Los Alcatracez</item>
+        <item>Burger King</item>
+        <item>Vips</item>
+    </string-array>
+    <array name="lugares_imagenes">
+        <item>@drawable/lugar_1</item>
+        <item>@drawable/lugar_2</item>
+        <item>@drawable/lugar_2</item>
+        <item>@drawable/lugar_1</item>
+        <item>@drawable/photo</item>
+        <item>@drawable/photo</item>
+    </array>
+    <string-array name="lugares_detalles">
+        <item>
+            Vendemos Hamburgesas de alta calidad, papas fritas y refrescos.
+            Tambien vendemos nuggets de pollo con un gran sabor
+            y tenemos varias promociones y entretenimiento para que pase un rato agradable con su familia
+        </item>
+        <item>
+            Vendemos Mariscos de la mejor calidad y al mejor precio tenemos desde cocteles economicos
+            hasta lo mas delicioso y raro del mar.
+        </item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.
+        </item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.
+        </item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.
+        </item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+        deserunt mollit anim id est laborum.
+        </item>
+    </string-array>
+    <string-array name="lugares_direcciones">
+        <item>MultiPlaza Tuxtepec</item>
+        <item>Piazza del Capitolo - 50122 Florence</item>
+        <item>New York City</item>
+        <item>2-3-1 Asakusa, Taitō-ku, Tokyo, Japan</item>
+        <item>At Meydanı No:7, 34122 Fatih/İstanbul, Turkey</item>
+        <item>Cape Town, South Africa</item>
+    </string-array>
+    <string-array name="lugares_horarios">
+        <item>8:00 AM - 9:00 PM</item>
+        <item>7:00 AM - 10:00 PM</item>
+        <item>10:00 AM - 11:00 PM</item>
+        <item>11:00 AM - 7:00 PM</item>
+        <item>9:00 AM - 6:00 PM</item>
+        <item>5:40 AM - 11:00 PM</item>
+    </string-array>
+    <string-array name="lugares_telefonos">
+        <item>2831182970</item>
+        <item>2831182970</item>
+        <item>2831182970</item>
+        <item>2831182970</item>
+        <item>2831182970</item>
+        <item>2831182970</item>
+    </string-array>
+
+    <array name="eventos_imagenes">
+        <item>@drawable/evento_1</item>
+        <item>@drawable/evento_2</item>
+        <item>@drawable/photo</item>
+        <item>@drawable/photo</item>
+        <item>@drawable/photo</item>
+        <item>@drawable/photo</item>
+    </array>
+    <string-array name="eventos_descripciones">
+        <item>Del 28 de julio hasta el 1 de agosto.
+        </item>
+        <item>Fecha limite el 19 de Agosto</item>
+        <item>Manhattan is the district in New York City</item>
+        <item>Senso-ji is the Shrine locates in Asakusa Tokyo</item>
+        <item>Sultan Ahmed Mosque is mosque locates in Istabul, Turkey</item>
+        <item>Table Mountain is mountain and park locates in Cape Town, South Africa.</item>
+    </string-array>
+    <string-array name="eventos_titulos">
+        <item>Gelagetza 2016</item>
+        <item>Incripciones Tecnologico de Tuxtepec</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="eventos_fechas">
+        <item>28 de julio</item>
+        <item>19 de agosto</item>
+        <item>28 de agosto</item>
+        <item>28 de agosto</item>
+        <item>28 de agosto</item>
+        <item>28 de agosto</item>
+    </string-array>
+    <string-array name="eventos_direcciones">
+        <item>Oxaca, centro</item>
+        <item>Av. Tecnologico</item>
+        <item>Tuxepec</item>
+    </string-array>
+
+
+    <array name="revista_imagenes">
+        <item>@drawable/revista_1</item>
+        <item>@drawable/revista_2</item>
+        <item>@drawable/revista_3</item>
+        <item>@drawable/photo</item>
+        <item>@drawable/photo</item>
+        <item>@drawable/photo</item>
+    </array>
+
+    <array name="noticias_imagenes">
+        <item>@drawable/noticia_1</item>
+        <item>@drawable/noticia_2</item>
+    </array>
+
+    <array name="noticias_fecha">
+        <item>10 ago 2016 1:39 PM .</item>
+        <item>10 ago 2016 10:23 AM .</item>
+    </array>
+
+    <array name="noticias_contenido">
+        <item>
+            El presidente Enrique Peña Nieto
+            se reunió este martes con las familias
+            de la población de Huauchinango, Puebla,
+            afectadas por las fuertes lluvias ocasionadas
+            por la tormenta tropical Earl
+        </item>
+        <item>
+            Las autoridades sanitarias de Estados Unidos
+            han recomendado a las mujeres embarazadas que
+            eviten viajar a una pequeña zona de Miami (Florida)
+            donde se han registrado 14 casos de Zika.
+        </item>
+    </array>
+
+    <string-array name="uploadtitles">
+        <item>Promocion</item>
+        <item>Noticia</item>
+        <item>Evento</item>
+        <item>Alerta (Incidencia)</item>
+    </string-array>
+
+    <array name="upload_imagenes">
+        <item>@drawable/ic_fiber_new_black_24dp</item>
+        <item>@drawable/ic_speaker_notes_black_24dp</item>
+        <item>@drawable/ic_nature_people_black_24dp</item>
+        <item>@drawable/ic_warning_black_24dp</item>
+    </array>
+
+</resources>

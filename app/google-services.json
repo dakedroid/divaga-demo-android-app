@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "781300039912",
+    "firebase_url": "https://divaga-dd37b.firebaseio.com",
+    "project_id": "divaga-dd37b",
+    "storage_bucket": "divaga-dd37b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781300039912:android:cf45104c41995f7d",
+        "android_client_info": {
+          "package_name": "com.example.kandksolutions.divaga"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781300039912-la87mcol5hkrdc043akq285fvacd0u3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmUG6l-Qwq-70i3kNzz6m5t3wkOus9Hps"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
