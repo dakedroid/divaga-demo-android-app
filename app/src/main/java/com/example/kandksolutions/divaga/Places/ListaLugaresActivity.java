@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.Places;
 
 import android.annotation.TargetApi;
 import android.content.res.Resources;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.example.kandksolutions.divaga.R;
 
 
 /**

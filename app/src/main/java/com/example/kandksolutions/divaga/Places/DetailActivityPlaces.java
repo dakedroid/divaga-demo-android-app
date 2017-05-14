@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.Places;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -29,6 +29,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.kandksolutions.divaga.R;
 
 /**
  * Provides UI for the Detail page with Collapsing Toolbar.

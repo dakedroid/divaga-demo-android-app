@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.HomeFragments;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -19,6 +19,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.kandksolutions.divaga.Events.DetailActivityEvents;
+import com.example.kandksolutions.divaga.Places.DetailActivityPlaces;
+import com.example.kandksolutions.divaga.R;
 
 /**
  * Created by dakedroid on 8/1/16.

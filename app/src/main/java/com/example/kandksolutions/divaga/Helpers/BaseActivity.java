@@ -1,8 +1,10 @@
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.Helpers;
 
 import android.app.ProgressDialog;
 import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.kandksolutions.divaga.R;
 
 public class BaseActivity extends AppCompatActivity {
 

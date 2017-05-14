@@ -1,7 +1,9 @@
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.UploadContent;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.kandksolutions.divaga.R;
 
 public class NoticiaUp extends AppCompatActivity {
 

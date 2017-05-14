@@ -1,13 +1,15 @@
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.About;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class EventoUp extends AppCompatActivity {
+import com.example.kandksolutions.divaga.R;
+
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evento_up);
+        setContentView(R.layout.activity_about);
     }
 }

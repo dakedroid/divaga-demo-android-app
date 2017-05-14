@@ -3,28 +3,40 @@ package com.example.kandksolutions.divaga;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.util.TypedValue;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
+import com.example.kandksolutions.divaga.About.AboutActivity;
+import com.example.kandksolutions.divaga.HomeFragments.FragmentEventos;
+import com.example.kandksolutions.divaga.HomeFragments.FragmentLugares;
+import com.example.kandksolutions.divaga.HomeFragments.FragmentNoticias;
+import com.example.kandksolutions.divaga.Models.Noticia;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -42,6 +54,7 @@ public class HomeActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +123,8 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+
+
     private NavigationView.OnNavigationItemSelectedListener mNavigationItemSelectedListener = new NavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(MenuItem item) {
@@ -124,17 +139,43 @@ public class HomeActivity extends AppCompatActivity {
     private boolean handleNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.navigation_item_1:
-                intent = new Intent(HomeActivity.this, LoginActivity.class);
-                startActivity(intent);
+                //intent = new Intent(HomeActivity.this, LoginActivity.class);
+                //startActivity(intent);
+                DatabaseReference mDatabaseReference;
+                mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+
+                Noticia movie = new Noticia("Noticia x", "Descripcion", "noticia_12");
+                //referring to movies node and setting the values from movie object to that location
+                mDatabaseReference.child("MisNoticias").push().setValue(movie);
+                //fragmentNoticias.onCreateView());
+
+
 
                 return true;
             case R.id.navigation_item_2:
-                 intent = new Intent(HomeActivity.this, UploadActivity.class);
-                startActivity(intent);
+                // intent = new Intent(HomeActivity.this, UploadActivity.class);
+                //startActivity(intent);
+                StorageReference storageRef;
+                storageRef = FirebaseStorage.getInstance().getReference();
+                storageRef.child("/noticias/noticia_12.jpeg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        // TODO: handle uri
+                        Log.i("DEBUG IMAGES", String.valueOf(uri));
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle any errors
+                        Log.i("DEBUG IMAGES", String.valueOf(exception.getStackTrace()));
+                    }
+                });
+
                 return true;
             case R.id.navigation_item_3:
-                intent = new Intent(HomeActivity.this, FavActivity.class);
-                startActivity(intent);
+                //intent = new Intent(HomeActivity.this, FavActivity.class);
+                //startActivity(intent);
+
                 return true;
             case R.id.navigation_item_4:
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
@@ -157,7 +198,10 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+
+
     private void showToast(String res) {
+
         Toast.makeText(this, res ,Toast.LENGTH_LONG).show();
     }
 

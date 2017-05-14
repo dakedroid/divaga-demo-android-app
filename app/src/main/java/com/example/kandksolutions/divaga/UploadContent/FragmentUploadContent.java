@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.UploadContent;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -16,6 +16,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.kandksolutions.divaga.R;
+import com.example.kandksolutions.divaga.UploadContent.AlertaUp;
+import com.example.kandksolutions.divaga.UploadContent.EventoUp;
+import com.example.kandksolutions.divaga.UploadContent.NoticiaUp;
+import com.example.kandksolutions.divaga.UploadContent.PromoUp;
 
 /**
  * Created by dakedroid on 8/1/16.

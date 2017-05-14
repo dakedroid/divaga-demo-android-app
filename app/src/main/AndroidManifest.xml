@@ -16,10 +16,11 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme">
         <activity
             android:name=".HomeActivity"
@@ -32,24 +33,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListaLugaresActivity"
+            android:name=".Places.ListaLugaresActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".DetailActivityPlaces"
+            android:name=".Places.DetailActivityPlaces"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".DetailActivityEvents"
+            android:name=".Events.DetailActivityEvents"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+
 
         <activity
-            android:name=".LocationPlacesActivity"
+            android:name=".Places.LocationPlacesActivity"
             android:label="@string/title_activity_location_places" />
         <activity
             android:name=".LoginActivity"
@@ -62,18 +61,18 @@
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"/>
         <activity
-            android:name=".AboutActivity"
+            android:name=".About.AboutActivity"
             android:label="Acerca de" />
         <activity
-            android:name=".UploadActivity"
+            android:name=".UploadContent.UploadActivity"
             android:label="Subir Contenido" />
         <activity
-            android:name=".FavActivity"
+            android:name=".Favorites.FavActivity"
             android:label="Favoritos" />
-        <activity android:name=".PromoUp" />
-        <activity android:name=".NoticiaUp" />
-        <activity android:name=".EventoUp" />
-        <activity android:name=".AlertaUp" />
+        <activity android:name=".UploadContent.PromoUp" />
+        <activity android:name=".UploadContent.NoticiaUp" />
+        <activity android:name=".UploadContent.EventoUp" />
+        <activity android:name=".UploadContent.AlertaUp" />
         <activity android:name=".RestorePasswordActivity"></activity>
     </application>
 

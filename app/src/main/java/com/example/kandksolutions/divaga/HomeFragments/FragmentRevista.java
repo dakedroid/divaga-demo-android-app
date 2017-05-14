@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.HomeFragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import com.example.kandksolutions.divaga.Places.DetailActivityPlaces;
+import com.example.kandksolutions.divaga.R;
 
 /**
  * Created by dakedroid on 8/1/16.

@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga;
+package com.example.kandksolutions.divaga.HomeFragments;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -17,14 +17,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.kandksolutions.divaga.Places.ListaLugaresActivity;
+import com.example.kandksolutions.divaga.R;
+
 /**
  * Created by dakedroid on 8/1/16.
  */
 public class FragmentLugares extends Fragment {
 
+
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycler_view, container, false);
         ContentAdapter adapter = new ContentAdapter(recyclerView.getContext());
         recyclerView.setAdapter(adapter);
