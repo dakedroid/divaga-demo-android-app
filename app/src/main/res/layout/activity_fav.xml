@@ -7,13 +7,13 @@
     android:paddingLeft="@dimen/keylines"
     android:paddingRight="@dimen/keylines"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.kandksolutions.divaga.Favorites.FavActivity">
+    tools:context="com.example.kandksolutions.divaga.Favoritos.FavoritosActivity">
 
     <fragment
-        android:name="com.example.kandksolutions.divaga.Favorites.FragmentFavs"
+        android:name="com.example.kandksolutions.divaga.Favoritos.FavoritosFragment"
         android:id="@+id/headlines_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout="@layout/item_card_favs" />
+        tools:layout="@layout/modelo_favoritos" />
 
 </RelativeLayout>

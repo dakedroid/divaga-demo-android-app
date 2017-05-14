@@ -1,6 +1,6 @@
 package com.example.kandksolutions.divaga.Helpers;
 
-import com.example.kandksolutions.divaga.Models.Noticia;
+import com.example.kandksolutions.divaga.Modelos.Noticia;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga.Places;
+package com.example.kandksolutions.divaga.Lugares;
 
 import android.annotation.TargetApi;
 import android.content.res.Resources;

@@ -1,15 +1,15 @@
-package com.example.kandksolutions.divaga.Favorites;
+package com.example.kandksolutions.divaga.SubirContenido;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.kandksolutions.divaga.R;
 
-public class FavActivity extends AppCompatActivity {
+public class NoticiaUp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fav);
+        setContentView(R.layout.activity_subir_noticia);
     }
 }

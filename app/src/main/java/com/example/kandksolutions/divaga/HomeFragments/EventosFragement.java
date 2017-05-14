@@ -20,8 +20,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.kandksolutions.divaga.Events.DetailActivityEvents;
-import com.example.kandksolutions.divaga.Places.DetailActivityPlaces;
+import com.example.kandksolutions.divaga.DetallesEventosActivity;
+import com.example.kandksolutions.divaga.Lugares.DetallesLugaresActivity;
 import com.example.kandksolutions.divaga.R;
 
 /**
@@ -29,7 +29,7 @@ import com.example.kandksolutions.divaga.R;
  */
 
 
-public class FragmentEventos extends Fragment {
+public class EventosFragement extends Fragment {
 
 
     @Override
@@ -50,7 +50,7 @@ public class FragmentEventos extends Fragment {
         ImageButton favoriteImageButton;
 
         public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.item_card_events, parent, false));
+            super(inflater.inflate(R.layout.modelo_eventos, parent, false));
             picture = (ImageView) itemView.findViewById(R.id.card_image);
             name = (TextView) itemView.findViewById(R.id.card_title);
             description = (TextView) itemView.findViewById(R.id.card_text);
@@ -59,8 +59,8 @@ public class FragmentEventos extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
-                    Intent intent = new Intent(context, DetailActivityEvents.class);
-                    intent.putExtra(DetailActivityPlaces.EXTRA_POSITION, getAdapterPosition());
+                    Intent intent = new Intent(context, DetallesEventosActivity.class);
+                    intent.putExtra(DetallesLugaresActivity.EXTRA_POSITION, getAdapterPosition());
                     context.startActivity(intent);
                 }
             });

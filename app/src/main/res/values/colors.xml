@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- ##################### TEMA DE LA APLICACION ###########################-->
+
+
+    <!-- COLORES PRIMARIOS -->
     <color name="colorPrimary">#00BCD4</color>
     <color name="colorPrimaryDark">#0097A7</color>
     <color name="colorAccent">#FFC107</color>
+    <!-- COLORES SECUNDARIOS-->
     <color name="colorPrimaryLight">#B2EBF2</color>
     <color name="colorTextIcons">#FFFFFF</color>
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondayText">#727272</color>
     <color name="colorDivider">#b6b6b6</color>
+
+    <!-- ##################### COLORES EXTRA ###########################-->
     <color name="white">#FFFFFF</color>
     <color name="dark_grey">#424242</color>
     <color name="medium_grey">#9E9E9E</color>
     <color name="button_grey">#757575</color>
-
     <color name="demo_title_section_textcolor">#2a84a5</color>
 
 

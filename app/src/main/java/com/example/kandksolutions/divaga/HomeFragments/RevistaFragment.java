@@ -1,12 +1,10 @@
 package com.example.kandksolutions.divaga.HomeFragments;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,21 +13,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.example.kandksolutions.divaga.Places.ListaLugaresActivity;
+import com.example.kandksolutions.divaga.Lugares.DetallesLugaresActivity;
 import com.example.kandksolutions.divaga.R;
 
 /**
  * Created by dakedroid on 8/1/16.
  */
-public class FragmentLugares extends Fragment {
-
-
+public class RevistaFragment extends Fragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycler_view, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(
+                R.layout.recycler_view, container, false);
         ContentAdapter adapter = new ContentAdapter(recyclerView.getContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
@@ -38,21 +35,22 @@ public class FragmentLugares extends Fragment {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView avator;
-        public TextView name;
+        public ImageView picture;
+
         public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.item_list_restaurants, parent, false));
-            avator = (ImageView) itemView.findViewById(R.id.list_avatar);
-            name = (TextView) itemView.findViewById(R.id.list_title);
+            super(inflater.inflate(R.layout.modelo_revista, parent, false));
+            picture = (ImageView) itemView.findViewById(R.id.card_image);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
-                    Intent intent = new Intent(context, ListaLugaresActivity.class);
-                    //intent.putExtra(DetailActivityPlaces.EXTRA_POSITION, getAdapterPosition());
-                    context.startActivity(intent);;
+                    Intent intent = new Intent(context, DetallesLugaresActivity.class);
+                    intent.putExtra(DetallesLugaresActivity.EXTRA_POSITION, getAdapterPosition());
+                    context.startActivity(intent);
                 }
             });
+
         }
     }
 
@@ -60,43 +58,34 @@ public class FragmentLugares extends Fragment {
      * Adapter to display recycler view.
      */
     public static class ContentAdapter extends RecyclerView.Adapter<ViewHolder> {
-        // Set numbers of List in RecyclerView.
-        private static final int LENGTH = 6;
+        // Set numbers of Card in RecyclerView.
+        private static final int LENGTH = 18;
 
-        private final String[] mPlaces;
-        private final Drawable[] mPlaceAvators;
+        private final Drawable[] mPlacePictures;
 
         public ContentAdapter(Context context) {
             Resources resources = context.getResources();
-            mPlaces = resources.getStringArray(R.array.lugares_menu_titulos);
-
-            TypedArray a = resources.obtainTypedArray(R.array.lugares_menu_imagenes);
-            mPlaceAvators = new Drawable[a.length()];
-            for (int i = 0; i < mPlaceAvators.length; i++) {
-                mPlaceAvators[i] = a.getDrawable(i);
+            TypedArray a = resources.obtainTypedArray(R.array.revista_imagenes);
+            mPlacePictures = new Drawable[a.length()];
+            for (int i = 0; i < mPlacePictures.length; i++) {
+                mPlacePictures[i] = a.getDrawable(i);
             }
             a.recycle();
         }
+
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             return new ViewHolder(LayoutInflater.from(parent.getContext()), parent);
         }
 
-        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-
-            holder.avator.setImageDrawable(mPlaceAvators[position % mPlaceAvators.length]);
-            holder.name.setText(mPlaces[position % mPlaces.length]);
+            holder.picture.setImageDrawable(mPlacePictures[position % mPlacePictures.length]);
         }
 
         @Override
         public int getItemCount() {
             return LENGTH;
         }
-
-
-
     }
-
 }

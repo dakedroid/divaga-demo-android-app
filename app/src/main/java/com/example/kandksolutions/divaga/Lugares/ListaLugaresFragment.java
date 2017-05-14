@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga.Places;
+package com.example.kandksolutions.divaga.Lugares;
 
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
@@ -28,7 +28,7 @@ import com.example.kandksolutions.divaga.R;
 /**
  * Created by dakedroid on 8/1/16.
  */
-public class FragmentListaLugares extends Fragment {
+public class ListaLugaresFragment extends Fragment {
 
     int tilePadding = 1;
 
@@ -62,7 +62,7 @@ public class FragmentListaLugares extends Fragment {
         int mode = 0;
 
         public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.item_card_places, parent, false));
+            super(inflater.inflate(R.layout.modelo_lista_lugares, parent, false));
             picture = (ImageView) itemView.findViewById(R.id.card_image);
             name = (TextView) itemView.findViewById(R.id.card_text);
             descriptionCardView = (CardView) itemView.findViewById(R.id.card_view);
@@ -75,8 +75,8 @@ public class FragmentListaLugares extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
-                    Intent intent = new Intent(context, DetailActivityPlaces.class);
-                    intent.putExtra(DetailActivityPlaces.EXTRA_POSITION, getAdapterPosition());
+                    Intent intent = new Intent(context, DetallesLugaresActivity.class);
+                    intent.putExtra(DetallesLugaresActivity.EXTRA_POSITION, getAdapterPosition());
                     context.startActivity(intent);
                 }
             });

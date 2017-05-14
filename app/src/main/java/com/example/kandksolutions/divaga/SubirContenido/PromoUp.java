@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga.UploadContent;
+package com.example.kandksolutions.divaga.SubirContenido;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ public class PromoUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_promo_up);
+        setContentView(R.layout.activity_subir_promocion);
         button = (Button) findViewById(R.id.btn_signup);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

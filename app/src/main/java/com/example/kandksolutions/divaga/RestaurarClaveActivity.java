@@ -18,10 +18,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class RestorePasswordActivity extends BaseActivity {
+public class RestaurarClaveActivity extends BaseActivity {
 
 
-    private static final String TAG = "RestorePasswordActivity";
+    private static final String TAG = "RestaurarClaveActivity";
 
 
     @InjectView(R.id.field_email) EditText mEmailField;
@@ -31,7 +31,7 @@ public class RestorePasswordActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
-        setContentView(R.layout.activity_restore_password);
+        setContentView(R.layout.activity_recuperar_clave);
         ButterKnife.inject(this);
 
 
@@ -57,13 +57,13 @@ public class RestorePasswordActivity extends BaseActivity {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "Email sent.");
                             hideProgressDialog();
-                            Intent intent = new Intent(RestorePasswordActivity.this, LoginActivity.class);
+                            Intent intent = new Intent(RestaurarClaveActivity.this, IniciarSesionActivity.class);
                             startActivity(intent);
                         }
 
                         if(!task.isSuccessful()){
 
-                            Toast.makeText(RestorePasswordActivity.this, R.string.auth_failed,
+                            Toast.makeText(RestaurarClaveActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
 
                         }

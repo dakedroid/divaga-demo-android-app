@@ -22,11 +22,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.kandksolutions.divaga.About.AboutActivity;
-import com.example.kandksolutions.divaga.HomeFragments.FragmentEventos;
-import com.example.kandksolutions.divaga.HomeFragments.FragmentLugares;
-import com.example.kandksolutions.divaga.HomeFragments.FragmentNoticias;
-import com.example.kandksolutions.divaga.Models.Noticia;
+import com.example.kandksolutions.divaga.AcercaDe.AcercaDeActivity;
+import com.example.kandksolutions.divaga.Favoritos.FavoritosActivity;
+import com.example.kandksolutions.divaga.HomeFragments.EventosFragement;
+import com.example.kandksolutions.divaga.HomeFragments.LugaresFragment;
+import com.example.kandksolutions.divaga.HomeFragments.NoticiasFragment;
+import com.example.kandksolutions.divaga.Modelos.Noticia;
+import com.example.kandksolutions.divaga.SubirContenido.SubirActivity;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -59,7 +61,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.home_activity);
         FacebookSdk.sdkInitialize(getApplicationContext());
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -88,7 +90,7 @@ public class HomeActivity extends AppCompatActivity {
         NavigationView navigation = (NavigationView) findViewById(R.id.navigation);
         assert navigation != null;
         navigation.setNavigationItemSelectedListener(mNavigationItemSelectedListener);
-        navigation.inflateHeaderView(R.layout.design_navigation_header);
+        navigation.inflateHeaderView(R.layout.home_design_navigation_header);
 
 
         // Tab Layout Implementation with view pager swipe support
@@ -139,12 +141,12 @@ public class HomeActivity extends AppCompatActivity {
     private boolean handleNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.navigation_item_1:
-                //intent = new Intent(HomeActivity.this, LoginActivity.class);
+                //intent = new Intent(HomeActivity.this, IniciarSesionActivity.class);
                 //startActivity(intent);
                 DatabaseReference mDatabaseReference;
                 mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
-                Noticia movie = new Noticia("Noticia x", "Descripcion", "noticia_12");
+                Noticia movie = new Noticia("Noticia x3", "Descripcion", "noticia_12");
                 //referring to movies node and setting the values from movie object to that location
                 mDatabaseReference.child("MisNoticias").push().setValue(movie);
                 //fragmentNoticias.onCreateView());
@@ -153,8 +155,10 @@ public class HomeActivity extends AppCompatActivity {
 
                 return true;
             case R.id.navigation_item_2:
-                // intent = new Intent(HomeActivity.this, UploadActivity.class);
-                //startActivity(intent);
+                intent = new Intent(HomeActivity.this, SubirActivity.class);
+                startActivity(intent);
+
+                /*
                 StorageReference storageRef;
                 storageRef = FirebaseStorage.getInstance().getReference();
                 storageRef.child("/noticias/noticia_12.jpeg").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -170,11 +174,11 @@ public class HomeActivity extends AppCompatActivity {
                         Log.i("DEBUG IMAGES", String.valueOf(exception.getStackTrace()));
                     }
                 });
-
+*/
                 return true;
             case R.id.navigation_item_3:
-                //intent = new Intent(HomeActivity.this, FavActivity.class);
-                //startActivity(intent);
+                intent = new Intent(HomeActivity.this, FavoritosActivity.class);
+                startActivity(intent);
 
                 return true;
             case R.id.navigation_item_4:
@@ -186,7 +190,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(Intent.createChooser(sharingIntent, "Compartir por:"));
                 return true;
             case R.id.navigation_item_5:
-                intent = new Intent(HomeActivity.this, AboutActivity.class);
+                intent = new Intent(HomeActivity.this, AcercaDeActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.log_out:
@@ -232,9 +236,9 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FragmentLugares(), "Lugares");
-        adapter.addFragment(new FragmentNoticias(), "Noticias");
-        adapter.addFragment(new FragmentEventos(), "Eventos");
+        adapter.addFragment(new LugaresFragment(), "Lugares");
+        adapter.addFragment(new NoticiasFragment(), "Noticias");
+        adapter.addFragment(new EventosFragement(), "Eventos");
         viewPager.setAdapter(adapter);
     }
 
@@ -292,7 +296,7 @@ public class HomeActivity extends AppCompatActivity {
     void checkSesion() {
 
         if (readFromFile(this).equals("false")){
-            intent = new Intent(HomeActivity.this, LoginActivity.class);
+            intent = new Intent(HomeActivity.this, IniciarSesionActivity.class);
             startActivity(intent);
         }
     }

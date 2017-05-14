@@ -10,7 +10,7 @@
             android:id="@+id/navigation_item_1"
             android:icon="@drawable/ic_notifications_black_18dp"
             android:title="Notificaciones"
-            app:actionLayout="@layout/action_layout"/>
+            app:actionLayout="@layout/home_action_layout"/>
 
         <item
             android:id="@+id/navigation_item_2"

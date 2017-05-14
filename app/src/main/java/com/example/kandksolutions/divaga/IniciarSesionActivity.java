@@ -35,9 +35,9 @@ import java.io.FileOutputStream;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class LoginActivity extends BaseActivity {
+public class IniciarSesionActivity extends BaseActivity {
 
-    private static final String TAG = "LoginActivity";
+    private static final String TAG = "IniciarSesionActivity";
     private static final int REQUEST_SIGNUP = 0;
 
     boolean valid = false;
@@ -65,7 +65,7 @@ public class LoginActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_iniciar_sesion);
         textView = (TextView) findViewById(R.id.forgot_txv);
         textView2 = (TextView) findViewById(R.id.link_signup);
         ButterKnife.inject(this);
@@ -84,7 +84,7 @@ public class LoginActivity extends BaseActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RestorePasswordActivity.class);
+                Intent intent = new Intent(IniciarSesionActivity.this, RestaurarClaveActivity.class);
                 startActivity(intent);
             }
         });
@@ -92,7 +92,7 @@ public class LoginActivity extends BaseActivity {
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                Intent intent = new Intent(IniciarSesionActivity.this, RegistrarseActivity.class);
                 startActivity(intent);
             }
         });
@@ -111,7 +111,7 @@ public class LoginActivity extends BaseActivity {
                     // User is signed in
                     if (change){
                         saveSesion();
-                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        Intent intent = new Intent(IniciarSesionActivity.this, HomeActivity.class);
                         startActivity(intent);
                     }
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
@@ -170,7 +170,7 @@ public class LoginActivity extends BaseActivity {
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
-                            Toast.makeText(LoginActivity.this, R.string.auth_failed,
+                            Toast.makeText(IniciarSesionActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
                         }
 
@@ -283,14 +283,14 @@ public class LoginActivity extends BaseActivity {
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+                            Toast.makeText(IniciarSesionActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
 
                         }
 
                         if(task.isSuccessful()){
                             saveSesion();
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(IniciarSesionActivity.this, HomeActivity.class);
                             startActivity(intent);
                         }
 

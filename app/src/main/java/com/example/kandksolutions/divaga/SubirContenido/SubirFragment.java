@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga.UploadContent;
+package com.example.kandksolutions.divaga.SubirContenido;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -18,15 +18,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.kandksolutions.divaga.R;
-import com.example.kandksolutions.divaga.UploadContent.AlertaUp;
-import com.example.kandksolutions.divaga.UploadContent.EventoUp;
-import com.example.kandksolutions.divaga.UploadContent.NoticiaUp;
-import com.example.kandksolutions.divaga.UploadContent.PromoUp;
 
 /**
  * Created by dakedroid on 8/1/16.
  */
-public class FragmentUploadContent extends Fragment {
+public class SubirFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,7 +40,7 @@ public class FragmentUploadContent extends Fragment {
         public TextView name;
 
         public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.item_list_upload, parent, false));
+            super(inflater.inflate(R.layout.modelo_subir_contenido, parent, false));
             avator = (ImageView) itemView.findViewById(R.id.list_avatar);
             name = (TextView) itemView.findViewById(R.id.list_title);
         }
@@ -62,8 +58,8 @@ public class FragmentUploadContent extends Fragment {
 
         public ContentAdapter(Context context) {
             Resources resources = context.getResources();
-            mPlaces = resources.getStringArray(R.array.uploadtitles);
-            TypedArray a = resources.obtainTypedArray(R.array.upload_imagenes);
+            mPlaces = resources.getStringArray(R.array.subircontenido_titulos);
+            TypedArray a = resources.obtainTypedArray(R.array.subircontenido_imagenes);
             mPlaceAvators = new Drawable[a.length()];
             for (int i = 0; i < mPlaceAvators.length; i++) {
                 mPlaceAvators[i] = a.getDrawable(i);

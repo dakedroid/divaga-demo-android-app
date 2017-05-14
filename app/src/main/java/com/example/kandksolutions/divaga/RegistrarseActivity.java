@@ -26,7 +26,7 @@ import java.io.FileOutputStream;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class SignupActivity extends BaseActivity {
+public class RegistrarseActivity extends BaseActivity {
 
     private static final String TAG = "EmailPassword";
 
@@ -49,7 +49,7 @@ public class SignupActivity extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sing_up);
+        setContentView(R.layout.activity_registro);
         ButterKnife.inject(this);
 
 
@@ -65,7 +65,7 @@ public class SignupActivity extends BaseActivity {
         _loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                Intent intent = new Intent(RegistrarseActivity.this, IniciarSesionActivity.class);
                 startActivity(intent);
             }
         });
@@ -82,7 +82,7 @@ public class SignupActivity extends BaseActivity {
                 if (user != null) {
                     // User is signed in
                     if (change){
-                        Intent intent = new Intent(SignupActivity.this, HomeActivity.class);
+                        Intent intent = new Intent(RegistrarseActivity.this, HomeActivity.class);
                         startActivity(intent);
                         saveSesion();
                     }
@@ -140,7 +140,7 @@ public class SignupActivity extends BaseActivity {
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
-                            Toast.makeText(SignupActivity.this, R.string.auth_failed,
+                            Toast.makeText(RegistrarseActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
                         }
 
@@ -172,7 +172,7 @@ public class SignupActivity extends BaseActivity {
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
-                            Toast.makeText(SignupActivity.this, R.string.auth_failed,
+                            Toast.makeText(RegistrarseActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
                         }
 
@@ -226,7 +226,7 @@ public class SignupActivity extends BaseActivity {
             outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
             outputStream.write(string.getBytes());
             outputStream.close();
-            Intent intent = new Intent(SignupActivity.this, HomeActivity.class);
+            Intent intent = new Intent(RegistrarseActivity.this, HomeActivity.class);
             startActivity(intent);
             Log.i("FILE","EXITO");
         } catch (Exception e) {

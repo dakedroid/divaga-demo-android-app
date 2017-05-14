@@ -33,13 +33,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Places.ListaLugaresActivity"
+            android:name=".Lugares.ListaLugaresActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Places.DetailActivityPlaces"
+            android:name=".Lugares.DetallesLugaresActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Events.DetailActivityEvents"
+            android:name=".Eventos.DetallesEventosActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
@@ -48,32 +48,32 @@
 
 
         <activity
-            android:name=".Places.LocationPlacesActivity"
+            android:name=".Lugares.LocalizacionLugaresActivity"
             android:label="@string/title_activity_location_places" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".IniciarSesionActivity"
             android:label="Iniciar Sesion" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".RegistrarseActivity"
             android:label="@string/title_activity_login" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"/>
         <activity
-            android:name=".About.AboutActivity"
+            android:name=".AcercaDe.AcercaDeActivity"
             android:label="Acerca de" />
         <activity
-            android:name=".UploadContent.UploadActivity"
+            android:name=".SubirContenido.SubirActivity"
             android:label="Subir Contenido" />
         <activity
-            android:name=".Favorites.FavActivity"
+            android:name=".Favoritos.FavoritosActivity"
             android:label="Favoritos" />
-        <activity android:name=".UploadContent.PromoUp" />
-        <activity android:name=".UploadContent.NoticiaUp" />
-        <activity android:name=".UploadContent.EventoUp" />
-        <activity android:name=".UploadContent.AlertaUp" />
-        <activity android:name=".RestorePasswordActivity"></activity>
+        <activity android:name=".SubirContenido.PromoUp" />
+        <activity android:name=".SubirContenido.NoticiaUp" />
+        <activity android:name=".SubirContenido.EventoUp" />
+        <activity android:name=".SubirContenido.AlertaUp" />
+        <activity android:name=".RestaurarClaveActivity"></activity>
     </application>
 
 </manifest>

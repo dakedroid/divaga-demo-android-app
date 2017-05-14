@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">Divaga</string>
-
+    <!-- NAVIGATION DRAWER -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
-
     <string name="navigation_open">Open</string>
     <string name="navigation_close">Close</string>
     <string name="navigation_item_with_icon">Item with icon</string>
@@ -22,10 +21,9 @@
     <string name="navigation_sub_item_2">Subitem 2</string>
 
 
+    <!-- DESCRIPCIONES -->
     <string name="item_title">Palais Garnier</string>
-    <string name="item_desc">The Palais Garnier which locates in Paris was built from 1861 for
-        the Paris Opera.
-    </string>
+    <string name="item_desc">The Palais Garnier which locates in Paris was built from 1861 forthe Paris Opera.</string>
     <string name="detail_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -34,10 +32,14 @@
         deserunt mollit anim id est laborum.
     </string>
     <string name="detail_location">"8 Rue Scribe, 75009 Paris, France"</string>
+
+    <!-- GOOGLE MAPS -->
     <string name="title_activity_location_places">Map</string>
+
+    <!-- REGISTRP -->
     <string name="title_activity_login">Registrarme</string>
 
-    <!-- Strings related to login -->
+    <!-- INICIO DE SESION -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -49,34 +51,37 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="facebook_app_id">598121243699772</string>
-    <string name="num_likes">10320</string>
-
-
-    <string name="auth_failed">¡Error!, intente de nuevo</string>
-
-    <string name="loading">Cargando…</string>
-
-    <string name="camera_button_text">Upload</string>
-    <string name="sign_in_prompt">Sign In to begin</string>
-    <string name="take_photo_prompt">Upload a Photo</string>
-    <string name="download">Download</string>
-    <string name="sign_in_anonymously">Sign In</string>
-    <string name="rationale_storage">This sample reads images from your camera to demonstrate uploading.</string>
-    <string name="label_link">Link to Uploaded File</string>
-    <string name="label_download">Download File</string>
     <string name="log_out">Log out</string>
-    <string name="success">Success</string>
+    <string name="sign_in_prompt">Sign In to begin</string>
+    <string name="sign_in_anonymously">Sign In</string>
 
+
+    <!-- AVISOS  -->
+    <string name="auth_failed">¡Error!, intente de nuevo</string>
+    <string name="loading">Cargando…</string>
     <string name="progress_downloading">Downloading…</string>
     <string name="progress_uploading">Uploading…</string>
     <string name="progress_auth">Signing In…</string>
-
     <string name="upload_success">Upload finished</string>
     <string name="upload_failure">Upload failed</string>\
-
     <string name="download_success">Download finished</string>
     <string name="download_failure">Download failure</string>
+    <string name="success">Success</string>
+
+    <!-- EXTRAS -->
+    <string name="facebook_app_id">598121243699772</string>
+    <string name="num_likes">10320</string>
+
+    <!-- SUBIR Y FOTOS -->
+    <string name="camera_button_text">Upload</string>
+    <string name="take_photo_prompt">Upload a Photo</string>
+    <string name="download">Download</string>
+    <string name="rationale_storage">This sample reads images from your camera to demonstrate uploading.</string>
+    <string name="label_link">Link to Uploaded File</string>
+    <string name="label_download">Download File</string>
+
+
+
 
 
 </resources>

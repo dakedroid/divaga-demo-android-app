@@ -18,7 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.kandksolutions.divaga.Models.Noticia;
+import com.example.kandksolutions.divaga.Modelos.Noticia;
 import com.example.kandksolutions.divaga.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.common.ConnectionResult;
@@ -31,7 +31,7 @@ import com.squareup.picasso.Picasso;
 /**
  * Created by dakedroid on 8/1/16.
  */
-public class FragmentNoticias extends Fragment {
+public class NoticiasFragment extends Fragment {
 
     public RecyclerView recyclerView;
     private ProgressDialog mProgressDialog;
@@ -67,7 +67,7 @@ public class FragmentNoticias extends Fragment {
 
         FirebaseRecyclerAdapter<Noticia,NoticiaViewHolder> adapter = new FirebaseRecyclerAdapter<Noticia, NoticiaViewHolder>(
                 Noticia.class,
-                R.layout.item_card_news,
+                R.layout.modelo_noticias,
                 NoticiaViewHolder.class,
                 mDatabaseReference.child("MisNoticias").getRef()
         ) {

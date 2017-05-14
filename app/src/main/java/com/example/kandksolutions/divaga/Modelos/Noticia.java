@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga.Models;
+package com.example.kandksolutions.divaga.Modelos;
 
 /**
  * Created by dakedroid on 26/01/2017.

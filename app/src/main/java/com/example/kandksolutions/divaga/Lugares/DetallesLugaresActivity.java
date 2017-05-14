@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.kandksolutions.divaga.Places;
+package com.example.kandksolutions.divaga.Lugares;
 
 import android.annotation.TargetApi;
 import android.content.Intent;
@@ -35,7 +35,7 @@ import com.example.kandksolutions.divaga.R;
 /**
  * Provides UI for the Detail page with Collapsing Toolbar.
  */
-public class DetailActivityPlaces extends AppCompatActivity {
+public class DetallesLugaresActivity extends AppCompatActivity {
 
     public static final String EXTRA_POSITION = "position";
 
@@ -43,7 +43,7 @@ public class DetailActivityPlaces extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_places);
+        setContentView(R.layout.activity_detalles_lugares);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Set Collapsing Toolbar layout to the screen
@@ -89,7 +89,7 @@ public class DetailActivityPlaces extends AppCompatActivity {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(DetailActivityPlaces.this,LocationPlacesActivity.class);
+                    Intent intent = new Intent(DetallesLugaresActivity.this,LocalizacionLugaresActivity.class);
                     startActivity(intent);
                 }
             });

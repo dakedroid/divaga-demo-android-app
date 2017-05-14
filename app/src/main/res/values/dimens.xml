@@ -1,51 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="tabsHeight">48dp</dimen>
-    <dimen name="fab_margin">5dp</dimen>
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- ##################### CARD VIEWS ###########################-->
+
     <dimen name="card_height">340dp</dimen>
     <dimen name="card_new_h">300dp</dimen>
     <dimen name="card_height_news">352dp</dimen>
     <dimen name="card_prueba_h">230dp</dimen>
-    <dimen name="md_keylines">16dp</dimen>
-    <dimen name="keylines">5dp</dimen>
-    <dimen name="tile_padding">20dp</dimen>
-    <dimen name="tile_height">160dp</dimen>
-    <dimen name="app_bar_height">256dp</dimen>
-    <dimen name="article_keylines">72dp</dimen>
-    <dimen name="avator_size">40dp</dimen>
-    <dimen name="card_title_height">40dp</dimen>
-    <dimen name="article_titles">20sp</dimen>
     <dimen name="cards_button_width">48dp</dimen>
     <dimen name="cards_button_height">48dp</dimen>
-    <dimen name="article_subheading">16sp</dimen>
+    <dimen name="card_title_height">40dp</dimen>
     <dimen name="card_image_height">200dp</dimen>
     <dimen name="card_image_height_prueba">150dp</dimen>
-    <dimen name="list_body">14sp</dimen>
+    <dimen name="carddemo_list_padding">8dp</dimen>
+    <dimen name="card_expand">100dp</dimen>
+    <dimen name="card_expand_places">200dp</dimen>
+    <dimen name="card_size_prueba">250dp</dimen>
+    <dimen name="card_background_default_radius">2dp</dimen>
+
+    <!-- ##################### ARTICULOS ###########################-->
+
+    <dimen name="article_keylines">72dp</dimen>
+    <dimen name="article_titles">20sp</dimen>
+    <dimen name="article_subheading">16sp</dimen>
+    <dimen name="standard_padding_small">4dp</dimen>
+    <dimen name="standard_padding">8dp</dimen>
+    <dimen name="standard_padding_large">16dp</dimen>
+    <dimen name="tile_padding">20dp</dimen>
+    <dimen name="tile_height">160dp</dimen>
+
+    <!-- ##################### EXTRAS ###########################-->
+
+
+    <!-- LINEAS MUERTAS -->
+    <dimen name="md_keylines">16dp</dimen>
+    <dimen name="keylines">5dp</dimen>
+
+    <!-- NAVIGATION DRAWER -->
+    <dimen name="app_bar_height">256dp</dimen>
     <dimen name="navheader_height">222dp</dimen>
+    <dimen name="avator_size">40dp</dimen>
+    <dimen name="tabsHeight">48dp</dimen>
 
+    <!-- MARGENES -->
+    <dimen name="fab_margin">5dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- OTROS -->
+    <dimen name="list_body">14sp</dimen>
     <dimen name="hd_fab_size">52dp</dimen>
     <dimen name="hd_button_elevation">2dp</dimen>
     <dimen name="hd_button_press_elevation">4dp</dimen>
     <dimen name="toolbar_x2">112dp</dimen>
     <dimen name="circle_elevation">4dp</dimen>
     <dimen name="circle_size">70dp</dimen>
-    <dimen name="carddemo_list_padding">8dp</dimen>
-
     <dimen name="arrow_size">32dp</dimen>
-    <dimen name="standard_padding_small">4dp</dimen>
-    <dimen name="standard_padding">8dp</dimen>
-    <dimen name="standard_padding_large">16dp</dimen>
-
-
-    <dimen name="card_background_default_radius">2dp</dimen>
     <dimen name="product_description_min_height">100dp</dimen>
-
-    <dimen name="card_expand">100dp</dimen>
-    <dimen name="card_expand_places">200dp</dimen>
-    <dimen name="card_size_prueba">250dp</dimen>
 
 
 </resources>

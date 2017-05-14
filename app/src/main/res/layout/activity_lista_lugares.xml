@@ -60,11 +60,11 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <fragment
-                android:name="com.example.kandksolutions.divaga.Places.FragmentListaLugares"
+                android:name="com.example.kandksolutions.divaga.Lugares.ListaLugaresFragment"
                 android:id="@+id/headlines_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:layout="@layout/item_card_places" />
+                tools:layout="@layout/modelo_lista_lugares" />
 
         </android.support.v4.widget.NestedScrollView>
     </android.support.design.widget.CoordinatorLayout>

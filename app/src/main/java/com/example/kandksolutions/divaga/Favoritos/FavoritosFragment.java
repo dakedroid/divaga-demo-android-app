@@ -1,4 +1,4 @@
-package com.example.kandksolutions.divaga.Favorites;
+package com.example.kandksolutions.divaga.Favoritos;
 
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
@@ -23,13 +23,13 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.example.kandksolutions.divaga.Places.DetailActivityPlaces;
+import com.example.kandksolutions.divaga.Lugares.DetallesLugaresActivity;
 import com.example.kandksolutions.divaga.R;
 
 /**
  * Created by dakedroid on 8/1/16.
  */
-public class FragmentFavs extends Fragment {
+public class FavoritosFragment extends Fragment {
 
     int tilePadding = 1;
 
@@ -63,7 +63,7 @@ public class FragmentFavs extends Fragment {
         int mode = 0;
 
         public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.item_card_favs, parent, false));
+            super(inflater.inflate(R.layout.modelo_favoritos, parent, false));
             picture = (ImageView) itemView.findViewById(R.id.card_image);
             name = (TextView) itemView.findViewById(R.id.card_text);
             descriptionCardView = (CardView) itemView.findViewById(R.id.card_view);
@@ -76,8 +76,8 @@ public class FragmentFavs extends Fragment {
                 @Override
                 public void onClick(View v) {
                     Context context = v.getContext();
-                    Intent intent = new Intent(context, DetailActivityPlaces.class);
-                    intent.putExtra(DetailActivityPlaces.EXTRA_POSITION, getAdapterPosition());
+                    Intent intent = new Intent(context, DetallesLugaresActivity.class);
+                    intent.putExtra(DetallesLugaresActivity.EXTRA_POSITION, getAdapterPosition());
                     context.startActivity(intent);
                 }
             });
