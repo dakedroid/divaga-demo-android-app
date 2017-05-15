@@ -39,7 +39,7 @@
             android:name=".Lugares.DetallesLugaresActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Eventos.DetallesEventosActivity"
+            android:name=".DetallesEventosActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
@@ -74,6 +74,7 @@
         <activity android:name=".SubirContenido.EventoUp" />
         <activity android:name=".SubirContenido.AlertaUp" />
         <activity android:name=".RestaurarClaveActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

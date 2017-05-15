@@ -1,12 +1,15 @@
 package com.example.kandksolutions.divaga.HomeFragments;
 
 import android.animation.ValueAnimator;
-import android.app.Dialog;
-import android.app.ProgressDialog;
+import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -18,139 +21,49 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.kandksolutions.divaga.Modelos.Noticia;
 import com.example.kandksolutions.divaga.R;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.squareup.picasso.Picasso;
-
 
 /**
  * Created by dakedroid on 8/1/16.
  */
 public class NoticiasFragment extends Fragment {
 
-    public RecyclerView recyclerView;
-    private ProgressDialog mProgressDialog;
-    DatabaseReference mDatabaseReference;
-    //FirebaseStorage storage;
-    //StorageReference storageRef;
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        //storage = FirebaseStorage.getInstance();
-        //storageRef = FirebaseStorage.getInstance().getReference().child("noticias/noticia_14.jpeg");
-        //storageRef =  storage.getInstance().getReference();
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        int playServicesStatus = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(getActivity());
-        if(playServicesStatus != ConnectionResult.SUCCESS){
-            //If google play services in not available show an error dialog and return
-            final Dialog errorDialog = GoogleApiAvailability.getInstance().getErrorDialog(getActivity(), playServicesStatus, 0, null);
-            errorDialog.show();
-
-        }
-
-
-        recyclerView = (RecyclerView) inflater.inflate(R.layout.recycler_view, container, false);
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
-
+        RecyclerView recyclerView = (RecyclerView) inflater.inflate(R.layout.recycler_view, container, false);
+        ContentAdapter adapter = new ContentAdapter(recyclerView.getContext());
+        recyclerView.setAdapter(adapter);
+        //recyclerView.setHasFixedSize(true);
         StaggeredGridLayoutManager mStaggeredVerticalLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL); // (int spanCount, int orientation)
         recyclerView.setLayoutManager(mStaggeredVerticalLayoutManager);
-
-        FirebaseRecyclerAdapter<Noticia,NoticiaViewHolder> adapter = new FirebaseRecyclerAdapter<Noticia, NoticiaViewHolder>(
-                Noticia.class,
-                R.layout.modelo_noticias,
-                NoticiaViewHolder.class,
-                mDatabaseReference.child("MisNoticias").getRef()
-        ) {
-            @Override
-            protected void populateViewHolder(NoticiaViewHolder viewHolder, Noticia model, int position) {
-
-
-                viewHolder.titulo.setText(model.getTitulo());
-                viewHolder.description.setText(model.getDescripcion());
-
-                //Log.i("DEBUG",st.getPath());
-             /*   Glide.with(getContext())
-                        .using(new FirebaseImageLoader())
-                        .load(model.getImagen())
-                        .into(viewHolder.imagen);*/
-                // viewHolder.imagen.setImageBitmap(myBitmap);
-
-                //  StorageReference s
-                // Load the image using Glide
-                /*  Glide.with(getContext())
-                        .using(new FirebaseImageLoader())
-                        .load(storageRef)
-                        .into(viewHolder.imagen);
-*/
-                //Log.i("DEBUG KEVIN", String.valueOf(storageRef));
-                //viewHolder.imagen.setAlpha((float) 0.9);
-                //viewHolder.description.setRating(model.getMovieRating());
-                Picasso.with(getContext()).load("http://www.themistermen.co.uk/images/mrmen_uk/small.gif").into(viewHolder.imagen);
-            }
-        };
-
-        recyclerView.setAdapter(adapter);
-        recyclerView.setHasFixedSize(true);
-
+        //recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return recyclerView;
+
+
     }
 
-    private void showMessageDialog(String title, String message) {
-        AlertDialog ad = new AlertDialog.Builder(getContext())
-                .setTitle(title)
-                .setMessage(message)
-                .create();
-        ad.show();
-    }
-
-    private void showProgressDialog(String caption) {
-        if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(getContext());
-            mProgressDialog.setIndeterminate(true);
-        }
-
-        mProgressDialog.setMessage(caption);
-        mProgressDialog.show();
-    }
-
-    private void hideProgressDialog() {
-        if (mProgressDialog != null && mProgressDialog.isShowing()) {
-            mProgressDialog.dismiss();
-        }
-    }
-
-    /**
-     * Adapter to display recycler view.
-     */
-
-    public static class NoticiaViewHolder extends RecyclerView.ViewHolder{
-
-
-        TextView titulo;
-        TextView description;
-        ImageView imagen;
-        CardView descriptionCardView;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        public ImageView picture;
+        public TextView name;
+        public TextView description;
+        public CardView descriptionCardView;
         private int descriptionViewFullHeight;
         private int descriptionViewMinHeight;
         private static final int ARROW_ROTATION_DURATION = 150;
         int mode = 0;
 
-        public NoticiaViewHolder(View v) {
-            super(v);
-            titulo = (TextView) v.findViewById(R.id.card_title);
+        public ViewHolder(LayoutInflater inflater, ViewGroup parent) {
+            super(inflater.inflate(R.layout.modelo_noticias, parent, false));
+            picture = (ImageView) itemView.findViewById(R.id.card_image);
+            name = (TextView) itemView.findViewById(R.id.card_title);
             description = (TextView) itemView.findViewById(R.id.card_text);
-            imagen = (ImageView) itemView.findViewById(R.id.card_image);
             descriptionCardView = (CardView) itemView.findViewById(R.id.card_view);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                }
+            });
 
             // Adding Snackbar to Action Button inside card
             ImageButton detailImageButton =
@@ -181,19 +94,11 @@ public class NoticiasFragment extends Fragment {
                             Snackbar.LENGTH_LONG).show();
                 }
             });
-
-
-
-
         }
-
 
         private void toggleProductDescriptionHeight(final View view) {
 
-            int size_card_default = 300;
-            int size_card_min_height = 1056;
-            // (int) getActivity().getResources().getDimension(R.dimen.card_expand)
-            descriptionViewFullHeight = descriptionCardView.getHeight()+ size_card_default ;
+            descriptionViewFullHeight = descriptionCardView.getHeight()+ (int) getActivity().getResources().getDimension(R.dimen.card_expand);
             descriptionViewMinHeight = descriptionCardView.getHeight();
 
             if (descriptionCardView.getHeight() == descriptionViewMinHeight && mode == 0) {
@@ -212,8 +117,8 @@ public class NoticiasFragment extends Fragment {
                 });
                 anim.start();
             } else {
-                // collapse  (int) getActivity().getResources().getDimension(R.dimen.card_height_news)
-                descriptionViewMinHeight = size_card_min_height;
+                // collapse
+                descriptionViewMinHeight = (int) getActivity().getResources().getDimension(R.dimen.card_height_news);
                 ValueAnimator anim = ValueAnimator.ofInt(descriptionCardView.getMeasuredHeightAndState(),
                         descriptionViewMinHeight);
                 anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -232,4 +137,47 @@ public class NoticiasFragment extends Fragment {
         }
     }
 
+    /**
+     * Adapter to display recycler view.
+     */
+    public class ContentAdapter extends RecyclerView.Adapter<ViewHolder> {
+        // Set numbers of Card in RecyclerView.
+        private static final int LENGTH = 6;
+
+        private final String[] mPlaces;
+        private final String[] mPlaceDesc;
+        private final Drawable[] mPlacePictures;
+
+        public ContentAdapter(Context context) {
+            Resources resources = context.getResources();
+            mPlaces = resources.getStringArray(R.array.noticias_fecha);
+            mPlaceDesc = resources.getStringArray(R.array.noticias_contenido);
+            TypedArray a = resources.obtainTypedArray(R.array.noticias_imagenes);
+            mPlacePictures = new Drawable[a.length()];
+            for (int i = 0; i < mPlacePictures.length; i++) {
+                mPlacePictures[i] = a.getDrawable(i);
+            }
+            a.recycle();
+        }
+
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            return new ViewHolder(LayoutInflater.from(parent.getContext()), parent);
+        }
+
+        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+        @Override
+        public void onBindViewHolder(ViewHolder holder, int position) {
+            holder.picture.setImageDrawable(mPlacePictures[position % mPlacePictures.length]);
+            holder.picture.setAlpha((float) 0.8);
+            holder.picture.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+            holder.name.setText(mPlaces[position % mPlaces.length]);
+            holder.description.setText(mPlaceDesc[position % mPlaceDesc.length]);
+        }
+
+        @Override
+        public int getItemCount() {
+            return LENGTH;
+        }
+    }
 }

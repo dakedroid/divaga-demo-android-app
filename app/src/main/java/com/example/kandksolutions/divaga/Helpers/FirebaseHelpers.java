@@ -14,13 +14,13 @@ import java.util.ArrayList;
  * Created by dakedroid on 26/01/2017.
  */
 
-public class FirebaseHelper {
+public class FirebaseHelpers {
 
     ArrayList<String> noticias = new ArrayList<>();
     Boolean saved = null;
     DatabaseReference db;
 
-    public FirebaseHelper(DatabaseReference db) {
+    public FirebaseHelpers(DatabaseReference db) {
         this.db = db;
     }
     //SAVE

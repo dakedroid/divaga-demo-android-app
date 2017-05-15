@@ -155,7 +155,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 return true;
             case R.id.navigation_item_2:
-                intent = new Intent(HomeActivity.this, SubirActivity.class);
+                    intent = new Intent(HomeActivity.this,  MainActivity.class);
                 startActivity(intent);
 
                 /*
