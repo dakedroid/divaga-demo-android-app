@@ -1,6 +1,4 @@
 # Android-Divaga-App
 
 Android Mobile Application Divaga
-This Application is written in Java and XML
-This is the first Version of Divaga and is the base of the finished app in Google Playstore
-This Code is juts for Learning. This not cotains all the functionalities of Divaga.
+This Application is written in Java and XML, is the first Version of Divaga and it is the base on the finished App Available   Google in  Playstore, this Code is juts for Learning and it not not cotain all the functionalities of Divaga.
